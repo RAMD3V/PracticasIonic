@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Formulario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Form,ulario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-title>Danos tu opinión</ion-title><br>
+  <div id="formul">
+    <form [formGroup]="formulario" (ngSubmit)="guardarinfo()">
+      <ion-label>Nombre</ion-label>
+      <ion-input placeholder="Ingresa tu Nombre" formControlName="nombre"></ion-input>
+      <ion-label>Correo</ion-label>
+      <ion-input placeholder="Ingresa tu Correo" formControlName="correo"></ion-input>
+      <ion-label>Mensaje</ion-label>
+      <ion-textarea placeholder="Ingresa tu Mensaje" formControlName="mensaje"></ion-textarea>
+      <br>
+      <ion-button id="btn"type="submit">Guardar los Datos</ion-button>
+    </form><br><br>
+    <table *ngIf="estado">
+      <tr>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Mensaje</th>
+      </tr>
+      <tbody *ngFor="let msj of mensaje">
+          <tr>
+              <td>{{msj.nombre}}</td>
+              <td>{{msj.correo}}</td>
+              <td>{{msj.mensaje}}</td>
+          </tr>
+      </tbody>
+  </table><br>
+  </div>
+</ion-content>

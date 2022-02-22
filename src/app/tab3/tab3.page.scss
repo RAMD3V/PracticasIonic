@@ -1,0 +1,29 @@
+#formul{
+    margin: 0px auto;
+    width: 80%;
+}
+ion-title{
+    text-align: center;
+}
+#btn{
+    margin: 0px auto;
+    width: 100%;
+}
+table {
+  margin: 0px auto;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid rgb(60, 19, 172);
+}
+table th{
+  text-align: center;
+  background-color: #0f00e0;
+  color: white;
+}
+
+table td{
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
